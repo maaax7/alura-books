@@ -11,6 +11,7 @@
     --cor-branco: #FFFFFF;
     --cor-alternativo: #C4C4C4;
     --Fonte-padrao: 'Poppins', sans-serif;
+    --cor-texto: rgba(0, 0, 0, 0.85);
 }
 
 @media (max-width: 428) {}
