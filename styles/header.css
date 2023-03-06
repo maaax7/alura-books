@@ -24,7 +24,10 @@
     padding: 0.1em;
 }
 
-.container__titulo {
+.container__titulo,
+.container__botao,
+.opcoes,
+.container__texto {
     display: none;
 }
 
@@ -39,8 +42,14 @@
     background: var(--cor-gradiente);
 }
 
-.container__botao{
-    display: none;
+.container__botao:checked~.container__rotulo > .cabecalho__menu-hamburguer {
+    background-image: url("../img/menu_black_24dp\ 1.svg");
+    background-repeat: no-repeat;
+    
+}
+
+.container__botao:checked~.container__rotulo {
+    background-color: var(--cor-subtitulo);
 }
 
 .container__botao:checked~.lista-menu {
@@ -67,20 +76,14 @@
     text-transform: uppercase;
 }
 
-.opcoes {
-    display: none;
-}
-
-.container__texto {
-    display: none;
-}
-
 @media screen and (min-width: 1024px) {
     .container__imagem {
         padding-left: 5em;
     }
 
-    .cabecalho__menu-hamburguer {
+    .cabecalho__menu-hamburguer,
+    .icone-favoritos,
+    .opcoes__botao {
         display: none;
     }
 
@@ -93,6 +96,14 @@
         font-weight: 400;
     }
 
+    .opcoes__botao:checked~.opcoes__rotulo>.opcoes__item{
+        background: var(--cor-subtitulo);
+    }
+
+    .opcoes__botao:checked~.opcoes__rotulo {
+        color: var(--cor-branco);
+    }
+
     .container__titulo--negrito {
         font-weight: 700;
     }
@@ -102,7 +113,7 @@
     }
 
     .opcoes__item {
-        padding: 0 1em;
+        padding: 2em 1em;
         text-transform: uppercase;
     }
 
@@ -111,34 +122,29 @@
         color: var(--cor-preta);
     }
 
-    .icone-perfil {
-        padding-right: 5em;
+    .container{
+        margin-right: 1em;
     }
-
-    .icone-favoritos {
-        display: none;
-    }
-
-    .opcoes__botao {
-        display: none;
-    }
-
     .opcoes__botao:checked~.lista-menu {
         display: block;
         width: auto;
     }
 
-    .lista-menu__link:hover {
+    .lista-menu__item:hover {
         color: var(--cor-branco);
-        background-color: var(--cor-subtitulo);
+        background: var(--cor-subtitulo);
+    }
+    .lista-menu__item:hover>.lista-menu__link{
+        -webkit-text-fill-color: var(--cor-branco);
+        text-decoration: none;
     }
 }
 
-@media screen and (min-width: 1728px){
-    .container{
+@media screen and (min-width: 1400px) {
+    .container {
         margin: 0 2em;
     }
-    
+
     .container__texto {
         display: block;
         padding-right: 1em;
@@ -148,10 +154,10 @@
         padding: 0;
     }
 
-    .opcoes{
+    .opcoes {
         margin-right: auto;
     }
-    
+
     .container__link {
         display: flex;
         align-items: center;
