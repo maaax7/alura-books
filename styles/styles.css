@@ -17,6 +17,8 @@
     --cor-preta: black;
     --Fonte-padrao: 'Poppins', sans-serif;
     --fonte-josefin: 'Josefin Sans', sans-serif;
+    --cor-cinza: #474646;
+    --cor-cinza-titulo: #858585;
 }
 
 body {
